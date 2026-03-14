@@ -21,16 +21,20 @@ A modern, beautiful, and interactive implementation of the classic Omok (Five in
 ### Technical Stack
 - **HTML5:** Semantic structure with custom containers for the board.
 - **CSS3:** Grid/Flexbox for layout, custom properties for theming, and modern effects (oklch, :has(), container queries).
-- **JavaScript (ES Modules):** Modular game logic for clean separation of concerns.
+- [x] Partnership Form: Modal opens/closes and points to the correct Formspree URL.
+- [x] Responsive: Sidebar adapts to mobile view.
+- [x] Disqus Comments: Integrated community discussion section below the game.
 
 ## Current Implementation Plan - COMPLETED
 
 ### 1. Structure (index.html) - DONE
 - Main game container, header, board, and controls are implemented.
+- **NEW:** Added Disqus thread container.
 
 ### 2. Styling (style.css) - DONE
 - Modern visual design with wood texture, glossy stones, and responsive layout.
 - Used oklch colors and SVG noise filter for high-quality aesthetics.
+- **NEW:** Styled Disqus comment section with responsive container.
 
 ### 3. Logic (main.js) - DONE
 - `OmokGame` class handles board state, move placement, and win detection.
@@ -40,6 +44,9 @@ A modern, beautiful, and interactive implementation of the classic Omok (Five in
 - **NEW:** Toggleable move sequence numbers on stones (수순 표시).
 - **NEW:** Partnership inquiry modal with Formspree integration.
 
+### 4. Community Features - DONE
+- **NEW:** Disqus comment section integration for user feedback and discussion.
+
 ## Verification & Testing
 - [x] Gameplay: Stones can be placed on intersections.
 - [x] Win Detection: Correctly identifies 5 in a row.
@@ -47,5 +54,6 @@ A modern, beautiful, and interactive implementation of the classic Omok (Five in
 - [x] Move Numbers: Toggle button correctly shows/hides numbers on stones.
 - [x] Partnership Form: Modal opens/closes and points to the correct Formspree URL.
 - [x] Responsive: Sidebar adapts to mobile view.
+- [x] Disqus: Comment section loads and follows container styling.
 
 

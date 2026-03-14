@@ -241,7 +241,18 @@ button {
 .form-group input, .form-group textarea { width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #444; background: #1a1a1a; color: white; font-family: inherit; }
 .form-group textarea { height: 120px; resize: vertical; }
 
+#comments-section {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
 @media (max-width: 950px) {
   #game-layout { flex-direction: column; align-items: center; }
   #sidebar { width: var(--board-size); height: auto; max-height: none; }
+  #comments-section { width: var(--board-size); padding: 1rem; }
 }
