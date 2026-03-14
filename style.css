@@ -246,13 +246,17 @@ button {
   max-width: 900px;
   margin-top: 3rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: #2a2a2a; /* Solid background for better Disqus compatibility */
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#disqus_thread {
+  min-height: 300px; /* Ensure space for loading */
 }
 
 @media (max-width: 950px) {
   #game-layout { flex-direction: column; align-items: center; }
   #sidebar { width: var(--board-size); height: auto; max-height: none; }
-  #comments-section { width: var(--board-size); padding: 1rem; }
+  #comments-section { width: var(--board-size); padding: 1.5rem; }
 }
