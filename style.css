@@ -251,12 +251,100 @@ button {
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-#disqus_thread {
-  min-height: 300px; /* Ensure space for loading */
+/* Game Info Tabs Styles */
+#game-info-tabs {
+  width: 100%;
+  max-width: 950px;
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tabs-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.tab-btn {
+  background: transparent;
+  color: var(--text-color);
+  opacity: 0.6;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.tab-btn.active {
+  opacity: 1;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: var(--accent-color);
+}
+
+.tab-content h4 {
+  margin: 1.2rem 0 0.8rem;
+  opacity: 0.9;
+}
+
+.tab-content p {
+  line-height: 1.7;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.tab-content ul {
+  padding-left: 1.2rem;
+  opacity: 0.8;
+}
+
+.tab-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+#privacy a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#privacy a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 950px) {
   #game-layout { flex-direction: column; align-items: center; }
   #sidebar { width: var(--board-size); height: auto; max-height: none; }
-  #comments-section { width: var(--board-size); padding: 1.5rem; }
+  #comments-section, #game-info-tabs { width: var(--board-size); padding: 1.5rem; }
+  .content-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
